@@ -87,6 +87,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         tools:layout_editor_absoluteY="142dp" />
 
+
+
     <ImageView
         android:id="@+id/imageview3"
         android:layout_width="70dp"
@@ -109,8 +111,23 @@
         android:layout_gravity="bottom"
         android:layout_marginBottom="0dp"
         android:baseline="0dp"
-        android:src="@drawable/tassegif"
+        android:src="@drawable/tasse"
         android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageview4"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="0dp"
+        android:baseline="0dp"
+        android:src="@drawable/tasseeclab"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

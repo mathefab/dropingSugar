@@ -55,7 +55,7 @@ public class AnimationActivity extends AppCompatActivity implements
 //    }
     public void theMove(float x, float y) {
         ImageView sucre = (ImageView) findViewById(R.id.imageview);
-        ImageView tasse = (ImageView) findViewById(R.id.imageview2);
+        ImageView tasseeclab = (ImageView) findViewById(R.id.imageview4);
         ImageView spoon = (ImageView) findViewById(R.id.imageview3);
 
 
@@ -70,6 +70,12 @@ public class AnimationActivity extends AppCompatActivity implements
         spinspoon.setInterpolator(new LinearInterpolator());
         spinspoon.setDuration(700);
         spoon.startAnimation(spinspoon);
+
+       // TODO si les coordonnées du sugar sont celles de la tasse alors afficher l'image view tasseeclab à la place de tasse)
+
+        tasseeclab.setVisibility(View.VISIBLE);
+
+
 
 
 
@@ -131,32 +137,32 @@ public class AnimationActivity extends AppCompatActivity implements
 //        calcul.execute(x, y);
     }
 
-    public void flySugarfly(float x, float y) {
-
-        ImageView tasse = (ImageView) findViewById(R.id.imageview2);
-
-
-        @SuppressLint("ObjectAnimatorBinding") ObjectAnimator animation = ObjectAnimator.ofFloat(tasse, "translationX", x);
-        @SuppressLint("ObjectAnimatorBinding") ObjectAnimator animation2 = ObjectAnimator.ofFloat(tasse, "translationY", y);
-
-        animation.setDuration(500);
-        animation.setFloatValues(x, y);
-        animation.start();
-        animation2.setDuration(500);
-        animation.setFloatValues(x, y);
-        animation2.start();
-
-        ImageView spoon = (ImageView) findViewById(R.id.imageview3);
-
-        @SuppressLint("ObjectAnimatorBinding") ObjectAnimator animation3 = ObjectAnimator.ofFloat(spoon, "translationX", x + 20);
-        @SuppressLint("ObjectAnimatorBinding") ObjectAnimator animation4 = ObjectAnimator.ofFloat(spoon, "translationY", y+20);
-
-        animation3.setDuration(500);
-        animation3.setFloatValues(x, y);
-        animation3.start();
-        animation4.setDuration(500);
-        animation4.setFloatValues(x, y);
-        animation4.start();
+//    public void flySugarfly(float x, float y) {
+//
+//        ImageView tasse = (ImageView) findViewById(R.id.imageview2);
+//
+//
+//        @SuppressLint("ObjectAnimatorBinding") ObjectAnimator animation = ObjectAnimator.ofFloat(tasse, "translationX", x);
+//        @SuppressLint("ObjectAnimatorBinding") ObjectAnimator animation2 = ObjectAnimator.ofFloat(tasse, "translationY", y);
+//
+//        animation.setDuration(500);
+//        animation.setFloatValues(x, y);
+//        animation.start();
+//        animation2.setDuration(500);
+//        animation.setFloatValues(x, y);
+//        animation2.start();
+//
+//        ImageView spoon = (ImageView) findViewById(R.id.imageview3);
+//
+//        @SuppressLint("ObjectAnimatorBinding") ObjectAnimator animation3 = ObjectAnimator.ofFloat(spoon, "translationX", x + 20);
+//        @SuppressLint("ObjectAnimatorBinding") ObjectAnimator animation4 = ObjectAnimator.ofFloat(spoon, "translationY", y+20);
+//
+//        animation3.setDuration(500);
+//        animation3.setFloatValues(x, y);
+//        animation3.start();
+//        animation4.setDuration(500);
+//        animation4.setFloatValues(x, y);
+//        animation4.start();
 //
 //            fly = new TranslateAnimation(0,2*x,0,2*y);/*-
 //            fly.setInterpolator(new LinearInterpolator());
@@ -174,7 +180,7 @@ public class AnimationActivity extends AppCompatActivity implements
 // it cannot update the UI until the loop is finished, and the last animation is displayed. Instead, use another thread,
 // perhaps using a Runnable with a timer.
 
-    }
+
 
     SeekBar seekBarSpeedx;
     SeekBar seekBarSpeedy;
