@@ -109,7 +109,7 @@
         android:layout_gravity="bottom"
         android:layout_marginBottom="0dp"
         android:baseline="0dp"
-        android:src="@drawable/tasse"
+        android:src="@drawable/tassegif"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
