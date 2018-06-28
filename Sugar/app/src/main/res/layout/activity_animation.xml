@@ -65,7 +65,7 @@
         tools:layout_editor_absoluteY="60dp" />
 
     <Button
-        android:id="@+id/btnRotateRight"
+        android:id="@+id/haveago"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/imageview"
@@ -90,14 +90,13 @@
     <ImageView
         android:id="@+id/imageview3"
         android:layout_width="70dp"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="186dp"
-        android:layout_toStartOf="@+id/seekerSpeedx"
-        android:paddingBottom="10dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="125dp"
         android:src="@drawable/cuillere"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteX="262dp"
+        tools:layout_editor_absoluteX="141dp"
         tools:layout_editor_absoluteY="142dp" />
 
 

@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.LinearInterpolator;
+import android.view.animation.RotateAnimation;
 import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,7 +27,7 @@ public class AnimationActivity extends AppCompatActivity implements
 //    TranslateAnimation fly;
 
     TextView textStatus;
-    Button btnRotationRight;
+    Button haveago;
 
     //
 //    public void position(Integer x) {
@@ -58,10 +59,21 @@ public class AnimationActivity extends AppCompatActivity implements
         ImageView spoon = (ImageView) findViewById(R.id.imageview3);
 
 
-        TranslateAnimation flysugar = new TranslateAnimation(x, x *30 , y -50, 50*y);
+        TranslateAnimation flysugar = new TranslateAnimation(x, x *30 , y, 30*y);
             flysugar.setInterpolator(new LinearInterpolator());
             flysugar.setDuration(700);
             sucre.startAnimation(flysugar);
+
+        RotateAnimation spinspoon = new RotateAnimation(0f, 360f,
+                Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+
+        spinspoon.setInterpolator(new LinearInterpolator());
+        spinspoon.setDuration(3000);
+        spoon.startAnimation(spinspoon);
+
+
+
+
 
 //        TranslateAnimation flytasse = new TranslateAnimation(x , x *4 , y , y*2);
 //        flytasse.setInterpolator(new LinearInterpolator());
@@ -191,8 +203,8 @@ public class AnimationActivity extends AppCompatActivity implements
     private void loadUI() {
         textStatus = (TextView) findViewById(R.id.textStatus);
 
-        btnRotationRight = (Button) findViewById(R.id.btnRotateRight);
-        btnRotationRight.setOnClickListener(this);
+        haveago = (Button) findViewById(R.id.haveago);
+        haveago.setOnClickListener(this);
 
         seekBarSpeedx = (SeekBar) findViewById(R.id.seekBarx);
         seekBarSpeedy = (SeekBar) findViewById(R.id.seekBary);
