@@ -64,11 +64,11 @@ public class AnimationActivity extends AppCompatActivity implements
             flysugar.setDuration(700);
             sucre.startAnimation(flysugar);
 
-        RotateAnimation spinspoon = new RotateAnimation(0f, 360f,
+        RotateAnimation spinspoon = new RotateAnimation(0f, (x*y),
                 Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
 
         spinspoon.setInterpolator(new LinearInterpolator());
-        spinspoon.setDuration(3000);
+        spinspoon.setDuration(700);
         spoon.startAnimation(spinspoon);
 
 
