@@ -57,29 +57,32 @@ public class AnimationActivity extends AppCompatActivity implements
         ImageView sucre = (ImageView) findViewById(R.id.imageview);
         ImageView tasseeclab = (ImageView) findViewById(R.id.imageview4);
         ImageView spoon = (ImageView) findViewById(R.id.imageview3);
+        ImageView tasse = (ImageView) findViewById(R.id.imageview2);
+        float pente = (int)(y+1)/(x+1)*100;
 
 
         TranslateAnimation flysugar = new TranslateAnimation(x, x *30 , y, 30*y);
             flysugar.setInterpolator(new LinearInterpolator());
-            flysugar.setDuration(700);
+            flysugar.setDuration(300);
             sucre.startAnimation(flysugar);
 
-        RotateAnimation spinspoon = new RotateAnimation(0f, (x*y),
+        RotateAnimation spinspoon = new RotateAnimation(0f, (x*y*x*y),
                 Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
 
         spinspoon.setInterpolator(new LinearInterpolator());
-        spinspoon.setDuration(700);
+        spinspoon.setDuration(900);
         spoon.startAnimation(spinspoon);
 
        // TODO si les coordonnées du sugar sont celles de la tasse alors afficher l'image view tasseeclab à la place de tasse)
 
-        tasseeclab.setVisibility(View.VISIBLE);
-
-
-
-
-
-
+       if (pente >220 && pente < 260){
+           tasseeclab.setVisibility(View.VISIBLE);
+           tasse.setVisibility(View.INVISIBLE);
+           }
+       else {
+           tasseeclab.setVisibility(View.INVISIBLE);
+           tasse.setVisibility(View.VISIBLE);
+       }
 
 //        TranslateAnimation flytasse = new TranslateAnimation(x , x *4 , y , y*2);
 //        flytasse.setInterpolator(new LinearInterpolator());
@@ -96,9 +99,6 @@ public class AnimationActivity extends AppCompatActivity implements
 //        animation.start();
 //        animation2.setDuration(500);
 //        animation2.start();
-
-
-
 
 //
 //        @SuppressLint("ObjectAnimatorBinding") ObjectAnimator animation3 = ObjectAnimator.ofFloat(tasse, "translationX", x * x);
@@ -267,12 +267,10 @@ public class AnimationActivity extends AppCompatActivity implements
 
     @Override
     public void onAnimationStart(Animation animation) {
-//        textStatus.setText("RUNNING");
     }
 
     @Override
     public void onAnimationEnd(Animation animation) {
-//        textStatus.setText("STOPPED");
     }
 
     @Override
